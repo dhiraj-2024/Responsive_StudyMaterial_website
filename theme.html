@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Half Coders</title>
+  <style>
+    /* Light Mode */
+    :root {
+      --background-color: #ffffff;
+      --text-color: #000000;
+    }
+
+    /* Dark Mode */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background-color: #1e1e1e;
+        --text-color: #ffffff;
+      }
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button.light-mode {
+      background-color: #f0f0f0;
+      color: #000000;
+    }
+
+    button.dark-mode {
+      background-color: #333333;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Half Coders</h1>
+    <p>Toggle between Light Mode and Dark Mode:</p>
+    <button class="light-mode" onclick="toggleMode('light')">Light Mode</button>
+    <button class="dark-mode" onclick="toggleMode('dark')">Dark Mode</button>
+  </div>
+
+  <script>
+    function toggleMode(mode) {
+      if (mode === 'light') {
+        document.documentElement.style.setProperty('--background-color', '#ffffff');
+        document.documentElement.style.setProperty('--text-color', '#000000');
+      } else if (mode === 'dark') {
+        document.documentElement.style.setProperty('--background-color', '#1e1e1e');
+        document.documentElement.style.setProperty('--text-color', '#ffffff');
+      }
+    }
+  </script>
+</body>
+</html>

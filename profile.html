@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - Half Coder</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color:transparent;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar{
+      background-color: white;
+      color: black;
+      border: 2px solid rgba(233, 223, 239, 0.86);
+      border-bottom: none;
+      display: flex;
+      justify-content: space-evenly;
+      height: 70px;
+      width: 100%;
+      align-items: center;
+      position: sticky;
+      
+      }
+      /* ********************************************************** */
+      .text:hover{
+      color: #691bf8;
+      font-weight: 700;
+      /* #9763F6 */
+      
+      }
+      .border:hover{
+      
+          border: 1px solid rgb(232, 233, 244) ;
+          box-shadow: 1px 1px 1px 1px rgb(231, 33, 7) ;
+      }
+      .border1:hover{
+      
+          border: 1px solid rgb(232, 233, 244) ;
+          box-shadow: 1px 1px 1px 1px rgb(12, 239, 220) ;
+      }
+      .textg{
+      
+          text-transform: uppercase;
+          background: rgb(16,203,190);
+          background: linear-gradient(90deg, rgba(16,203,190,1) 13%, rgba(161,19,240,1) 59%, rgba(76,59,215,1) 90%);
+          -webkit-background-clip:text;
+          -webkit-text-fill-color: transparent;
+      
+      }
+      .textg1{
+          /* text-transform: uppercase; */
+          background: rgb(242, 60, 215);
+      background: linear-gradient(90deg, rgb(247, 17, 17) 0%, rgb(68, 218, 198) 50%, rgb(89, 27, 244) 100%);
+      -webkit-background-clip:text;
+       -webkit-text-fill-color: transparent;
+      }
+      
+      /* ********************************************************** */
+      .nav-logo img{
+          margin-left: -70px;
+          margin-top: 10px;
+          height: 125px;
+          width: 300px;
+          /* position: relative; */
+          
+          /* padding-bottom: 5px; */
+      
+      }
+      
+      /* ********************************************************** */
+      
+      .nav-fun{
+          height: 8 0px;
+          width: 500px;
+          /* border: 2px solid rebeccapurple; */
+          color: black;
+      }
+      h1{
+          
+      }
+      span{
+          color: rgba(3, 100, 117, 0.596);
+      }
+      
+      /* ********************************************************** */
+      
+      /* ********************************************************** */
+      
+      
+      .nav-search{
+      
+          font-size: 20px;
+         
+      }
+      .nav-search a i{
+          text-decoration: none;
+          font-style: none;
+          
+          color: black;
+      }
+      /* ********************************************************** */
+      .nav-goal a{
+      
+      display: flex;
+      text-decoration: none;
+      color: black;
+      
+      }
+      .nav-goal a i{
+          font-size: 16px;
+          margin-top: 17px;
+          margin-right: 5px;
+      }
+      .nav-goal a p{
+          font-size: 16px;
+          font-weight: 700;
+      }
+      /* ********************************************************** */
+      .nav-cource p{
+      
+          color: black;
+      
+      }
+      .nav-cource a{
+      
+      text-decoration: none;
+      display: flex;
+      font-weight: 700;
+      }
+      .nav-cource i{
+      
+      margin-left: 4px;
+      margin-top: 17px;
+      /* font-weight: 700; */
+      }
+      /* ********************************************************** */
+      .nav-theme img{
+      
+      height: 30px;
+      width: 30px;
+      margin-top: 4px;
+      margin-left: 0px;
+      
+      
+      
+      }
+      
+      /* ********************************************************** */
+      
+      .nav-signin{
+      
+          color: rgb(254, 251, 251);
+          font-size: 16px;
+      }
+      .nav-signin a button{
+          cursor: pointer;
+          font-size: 16px;
+          width: 70px;
+          height: 30px;
+          background-color: rgb(126, 11, 221);
+          border-radius: 30%;
+          color: rgb(251, 250, 250);
+      }
+      /* ********************************************************** */
+      .nav-profile a{
+      
+      text-decoration: none;
+      
+      }
+      .nav-profile a i{
+      
+      font-size: 25px;
+      color: black;
+          
+          }
+      
+      
+      /* ********************************************************** */
+      /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+      
+      
+      .navbar-2{
+      
+          height: 40px;
+          width: 100%;
+          margin-top: 15px;
+         /* align-items: center; */
+      
+      }
+      /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+      
+      .nav2-menu{
+      
+          display: flex;
+          justify-content:center;
+          align-items: center;
+          margin-top: 7px;
+      
+      }
+      
+      .nav2-menu a{
+      
+          text-decoration: none;
+          
+      }
+      .nav2-menu p{
+      
+      margin-left: 25px;
+      color: black;
+      /* font-weight:bold; */
+      
+      }
+      hr{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color:  #9763F6;
+          width: 1000%;
+          /* max-width: 90%; */
+      }
+      hr{
+          size: 0.5%;
+          color: #9763F6;
+      }
+
+    /**********************************************************/
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      margin-top: 100px;
+      
+      padding: 20px;
+      background-color:rgb(16, 203, 190);
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #f3f1f7;
+    }
+
+    .profile-info {
+      margin-bottom: 20px;
+    }
+
+    .profile-info label {
+      font-weight: bold;
+    }
+
+    .profile-info p {
+      margin: 5px 0;
+    }
+
+    .edit-profile-btn {
+      background-color: #000000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .edit-profile-btn:hover {
+      background-color: #9e72f7;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+
+        <div class="nav-logo">
+
+            <a href="index.html"> <img src="/Users/rajputdhiraj/Desktop/dhiraj coding/Html And Css/half coders/hC_logo.png"
+                    alt="image is missing upload soon"> </a>
+
+        </div>
+
+        <div class="nav-fun">
+
+            <h2><span class="auto-type textg"></span></h2>
+
+        </div>
+        <!-- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+        <script>
+
+            var typed2 = new Typed(".auto-type", {
+                strings: ["Design first, then code.", "Planning is also design.", "When in doubt, use brute force.", "Programming uses head and gut."],
+                typeSpeed: 90,
+                backSpeed: 40,
+
+                loop: true
+            });
+        </script> -->
+
+
+
+
+        <div class="nav-search text ">
+            <a href="#"><i class="fa-solid fa-magnifying-glass text"></i></a>
+        </div>
+
+        <div class="nav-goal text ">
+            <a href="#"><i class="fa-solid fa-bullseye text"></i>
+                <p class="text">Set Goals</p>
+            </a>
+        </div>
+
+        <div class="nav-cource text">
+            <a href="cources.html">
+                <p class="text">Cources</p>
+                <i class="fa-solid fa-angle-down text"></i>
+            </a>
+        </div>
+
+        <div class="nav-theme ">
+            <a href="theme.html"><img width="64" height="64"
+                    src="https://img.icons8.com/nolan/64/1A6DFF/C822FF/bright-moon.png" alt="bright-moon" /></a>
+        </div>
+
+        <div class="nav-signin">
+            <a href="signin.html"> <button>sign-in</button> </a>
+        </div>
+
+        <div class="nav-profile">
+            <a href="profile.html">
+                <i class="fa-solid fa-circle-user text"></i>
+
+            </a>
+        </div>
+
+    </div>
+    <div class="navbar-2">
+        <div class="nav2-menu">
+            <a href="#">
+                <p class="text">Trending..!! </p>
+            </a>
+            <a href="#">
+                <p class="text">C </p>
+            </a>
+            <a href="#">
+                <p class="text">C++ </p>
+            </a>
+            <a href="#">
+                <p class="text">Python </p>
+            </a>
+            <a href="#">
+                <p class="text">Java </p>
+            </a>
+            <a href="#">
+                <p class="text">Css </p>
+            </a>
+            <a href="#">
+                <p class="text">Html </p>
+            </a>
+            <a href="#">
+                <p class="text">Java Script </p>
+            </a>
+            <a href="#">
+                <p class="text">Data Structure </p>
+            </a>
+            <a href="#">
+                <p class="text">Web Design</p>
+            </a>
+            <a href="#">
+                <p class="text">Projects</p>
+            </a>
+        </div>
+
+    </div>
+    <!-- <hr> -->
+
+</header>
+
+
+
+  <div class="container">
+    <h1>User Profile</h1>
+    <div class="profile-info">
+      <label for="username">Username:</label>
+      <p id="username">Rajputdhiraj18</p>
+    </div>
+    <div class="profile-info">
+      <label for="fullname">Full Name:</label>
+      <p id="fullname">Dhiraj Rajput</p>
+    </div>
+    <div class="profile-info">
+      <label for="email">Email:</label>
+      <p id="email">rajputdhiraj1852@gmail.com</p>
+    </div>
+    <div class="profile-info">
+      <label for="education">Education:</label>
+      <p id="education">Bachelor of Computer Science</p>
+    </div>
+    <div class="profile-info">
+      <label for="interests">Interests:</label>
+      <p id="interests">Programming, Web Development, Artificial Intelligence</p>
+    </div>
+    <button class="edit-profile-btn">Edit Profile</button>
+  </div>
+</body>
+</html>
